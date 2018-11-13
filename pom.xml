@@ -61,12 +61,24 @@
 
 
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.historicalsight.Application</mainClass>
+                </configuration>
             </plugin>
         </plugins>
+        <finalName>historicalsight</finalName>
     </build>
 
 </project>
